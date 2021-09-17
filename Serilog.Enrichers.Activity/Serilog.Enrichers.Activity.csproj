@@ -1,17 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+	<Nullable>enable</Nullable>
     <Authors>Luciano Evaristo Guerche</Authors>
     <Company />
     <Copyright>Luciano Evaristo Guerche @ 2021</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Serilog.Enrichers</RootNamespace>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.0.1</Version>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+    <Version>1.0.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
