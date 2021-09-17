@@ -2,9 +2,8 @@
 {
     using Serilog.Core;
     using Serilog.Events;
+    using System.Collections.Generic;
     using System.Diagnostics;
-    using System.Linq;
-    using System.Text;
 
     public class ActivityTagsEnricher : ILogEventEnricher
     {
@@ -15,9 +14,9 @@
             logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty(ActivityTagsPropertyName, GetActivityTags()));
         }
 
-        private static string? GetActivityTags()
+        private static IEnumerable<KeyValuePair<string, string?>>? GetActivityTags()
         {
-            return Activity.Current?.Tags?.Aggregate(new StringBuilder(), (sb, i) => sb.Append(i).Append(';'), sb => sb.ToString());
+            return Activity.Current?.Tags;
         }
     }
 }
