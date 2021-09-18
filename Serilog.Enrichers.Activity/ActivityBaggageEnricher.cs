@@ -14,7 +14,7 @@
             logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty(ActivityBaggagePropertyName, GetActivityBaggage()));
         }
 
-        private static IEnumerable<KeyValuePair<string, string?>>? GetActivityBaggage()
+        private static IEnumerable<KeyValuePair<string, string>> GetActivityBaggage()
         {
             return Activity.Current?.Baggage;
         }

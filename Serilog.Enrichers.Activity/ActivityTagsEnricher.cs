@@ -14,7 +14,7 @@
             logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty(ActivityTagsPropertyName, GetActivityTags()));
         }
 
-        private static IEnumerable<KeyValuePair<string, string?>>? GetActivityTags()
+        private static IEnumerable<KeyValuePair<string, string>> GetActivityTags()
         {
             return Activity.Current?.Tags;
         }

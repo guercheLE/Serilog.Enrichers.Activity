@@ -13,7 +13,7 @@
             logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty(ActivityOperationNamePropertyName, GetActivityOperationName()));
         }
 
-        private static string? GetActivityOperationName()
+        private static string GetActivityOperationName()
         {
             return Activity.Current?.OperationName;
         }
